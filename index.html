@@ -1,67 +1,293 @@
 <!DOCTYPE html>
-<html lang="ru" class="dark-theme">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мое пространство</title>
+    <title>Nexus | Современный дизайн</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✸</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
+    <!-- Кнопка наверх -->
+    <button id="backToTop" class="back-to-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">Nexus</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Главная</a>
+                <a href="#features" class="nav-link">Возможности</a>
+                <a href="#gallery" class="nav-link">Галерея</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+            
             <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
                 <i class="fas fa-moon"></i>
             </button>
-        </header>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-        <main class="main-content">
-            <div class="avatar-container">
-                <div class="avatar"></div>
-                <div class="status-indicator"></div>
+    <!-- Герой секция -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Современный дизайн</span>
+                    для твоего проекта
+                </h1>
+                <p class="hero-subtitle">
+                    Исследуй мир креативных решений, анимаций и инновационных подходов в веб-разработке. 
+                    Сделай свой проект заметным.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        Начать проект
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        Узнать больше
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
             </div>
-
-            <h1 class="title">Привет, я <span class="highlight">Аня</span></h1>
-            <p class="subtitle">Создаю цифровое пространство, изучаю веб & GitHub Pages</p>
-
-            <p class="description">
-                Эта страница — мой первый шаг в мир публикации проектов. Здесь будет появляться информация о моих работах, интересах и контактах. Минимализм — это стиль.
-            </p>
-
-            <div class="links">
-                <a href="https://github.com/yourusername" target="_blank" class="link-card">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://t.me/yourusername" target="_blank" class="link-card">
-                    <i class="fab fa-telegram"></i>
-                    <span>Telegram</span>
-                </a>
-                <a href="mailto:you@example.com" class="link-card">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                </a>
-                <a href="projects.html" class="link-card">
-                    <i class="fas fa-code-branch"></i>
-                    <span>Проекты</span>
-                </a>
+            
+            <div class="hero-visual">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+                <div class="mockup-card">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-item">
+                            <div class="mockup-line" style="width: 80%"></div>
+                        </div>
+                        <div class="mockup-item">
+                            <div class="mockup-line" style="width: 60%"></div>
+                        </div>
+                        <div class="mockup-item">
+                            <div class="mockup-line" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="quote">
-                <p>"Простота — это высшая степень изысканности."</p>
-                <p class="quote-author">— Леонардо да Винчи</p>
+    <!-- Особенности -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Популярные <span class="gradient-text">методики</span></h2>
+            <p class="section-subtitle">Современные тренды веб-дизайна в одном месте</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Адаптивный дизайн</h3>
+                    <p>Идеальное отображение на всех устройствах с использованием CSS Grid и Flexbox.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Flexbox</span>
+                        <span class="tag">Grid</span>
+                        <span class="tag">Media Queries</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Микроанимации</h3>
+                    <p>Плавные переходы и интерактивные элементы для улучшения пользовательского опыта.</p>
+                    <div class="feature-tags">
+                        <span class="tag">CSS Transitions</span>
+                        <span class="tag">GSAP</span>
+                        <span class="tag">Scroll-triggered</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Неоморфизм</h3>
+                    <p>Сочетание теней и светов для создания объемных элементов интерфейса.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Soft UI</span>
+                        <span class="tag">Shadows</span>
+                        <span class="tag">3D Effect</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Темная тема</h3>
+                    <p>Поддержка светлой и темной темы с автоматическим определением системных настроек.</p>
+                    <div class="feature-tags">
+                        <span class="tag">CSS Variables</span>
+                        <span class="tag">prefers-color-scheme</span>
+                        <span class="tag">Local Storage</span>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <footer class="footer">
-                <p>Собрано с <i class="fas fa-heart pulse"></i> и GitHub Pages</p>
-                <p class="footer-meta">© <span id="currentYear"></span> | Обновлено недавно</p>
-            </footer>
-        </main>
-    </div>
+    <!-- Галерея -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Визуальная <span class="gradient-text">галерея</span></h2>
+            <p class="section-subtitle">Интерактивные элементы с современными эффектами</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-card">
+                        <div class="card-content">
+                            <h3>Параллакс эффект</h3>
+                            <p>Создание глубины при скроллинге</p>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="card-btn">Демо</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-card">
+                        <div class="card-content">
+                            <h3>Градиентные тени</h3>
+                            <p>Мягкие цветные тени для элементов</p>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="card-btn">Демо</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-card">
+                        <div class="card-content">
+                            <h3>Стеклянный морфизм</h3>
+                            <p>Эффект матового стекла с размытием</p>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="card-btn">Демо</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Давай <span class="gradient-text">сотрудничать</span></h2>
+            <p class="section-subtitle">Свяжись со мной для обсуждения твоего проекта</p>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>design@nexus.example</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Локация</h3>
+                            <p>Москва, Россия</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Соцсети</h3>
+                            <div class="social-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea placeholder="Ваше сообщение..." rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        Отправить сообщение
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">Nexus</span>
+                </div>
+                
+                <p class="footer-text">
+                    Современный дизайн с применением актуальных трендов веб-разработки.
+                    Проект готов к размещению на GitHub Pages.
+                </p>
+                
+                <p class="copyright">
+                    © 2023 Nexus Design. Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
